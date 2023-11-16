@@ -8,7 +8,6 @@ import {
   ButtonStyleTypes,
 } from 'discord-interactions';
 import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
-import { getShuffledOptions, getResult } from './game.js';
 import { bruh } from './commands/bruh.js'
 import { dispo } from './commands/dispo.js'
 import { role } from './commands/role.js';
