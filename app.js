@@ -9,6 +9,9 @@ import {
 } from 'discord-interactions';
 import { VerifyDiscordRequest, getRandomEmoji, DiscordRequest } from './utils.js';
 import { getShuffledOptions, getResult } from './game.js';
+import { bruh } from './commands/bruh.js'
+import { dispo } from './commands/dispo.js'
+import { role } from './commands/role.js';
 
 // Create an express app
 const app = express();
@@ -40,6 +43,18 @@ app.post('/interactions', async function (req, res) {
    */
   if (type === InteractionType.APPLICATION_COMMAND) {
     const { name } = data;
+
+    if (name === 'bruh') {
+      return bruh(res);
+    }
+
+    if (name === 'dispo') {
+      return dispo(res);
+    }
+
+    if (name === 'role') {
+      return role(req, res);
+    }
 
     // "test" command
     if (name === 'test') {
